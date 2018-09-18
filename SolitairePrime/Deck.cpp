@@ -68,7 +68,7 @@ void Deck::shuffle() {
 		int ran1 = rand() % 52;
 		int ran2 = rand() % 52;
 
-		Card temp = theDeck[ran1];
+		Card temp = theDeck[ran1]; // No mistake here
 		theDeck[ran1] = theDeck[ran2];
 		theDeck[ran2] = temp;
 	}
