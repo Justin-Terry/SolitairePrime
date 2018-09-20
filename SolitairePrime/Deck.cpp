@@ -17,7 +17,7 @@ void Deck::newDeck() {
 		char rank;
 		int value;
 		if (i > 0 && i < 9) {
-			rank = '0' + (i + 1); // PARSE INT TO CHAR HERE!!!!!
+			rank = '0' + (i + 1);
 			value = (i + 1);
 		}
 		else {

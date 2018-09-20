@@ -25,21 +25,29 @@ int Pile::getTotal() {
 	return sum;
 }
 bool Pile::isPrime() {
+	// Make sure there are cards in the pile
 	if (numOfCards > 0) {
+		//Get the total of this pile
 		int s = this->getTotal();
+		//Make sure the total isn't 1
 		if (s != 1) {
+			// Loop through all the numbers below s
 			for (int i = 2; i < s - 1; i++) {
 				if (s%i == 0) {
+					// check if s is divisible by i, if it is then not prime
 					return false;
 				}
 			}
+			// Otherwise it is prime
 			return true;
 		}
 		else {
+			//if s = 1 then it's not prime
 			return false;
 		}
 	}
 	else {
+		// If the pile is empty it's not prime
 		return false;
 	}
 }

@@ -1,5 +1,5 @@
 #include "Card.h"
-
+#include <iomanip>
 
 
 Card::Card(char r, char s)
@@ -34,7 +34,8 @@ void Card::displayCard() {
 		cout << "10";
 	}
 	else {
-		cout << getRank();
+		// format the rank so that when 10 shows up the columns stay even
+		cout << setfill(' ') << setw(2) << getRank();
 	}
 	cout << getSuit();
 }
